@@ -1,5 +1,6 @@
 var express=require("express")
 var app=express();
+var path=require('path')
 app.use(express.static("docs"));
 // app.set("view engine","ejs");
 // app.set("views","./docs");
@@ -11,7 +12,7 @@ var server=require("http").Server(app);
 server.listen(process.env.PORT);
 
 app.get("/",function(req,res){
-  res.sendFile(__dirname+'/docs/index.html');
+  res.sendFile(path.join(__dirname+'/docs/index.html'));
 });
 
 app.get("/ap",(req,res)=>{
