@@ -9,7 +9,7 @@ app.use(require("body-parser").urlencoded({ extended: false }));
 
 var server=require("http").Server(app);
 // var io=require("socket.io")(server);
-server.listen(process.env.PORT);
+server.listen(process.env.PORT || 3000);
 
 app.get("/",function(req,res){
   res.sendFile(path.join(__dirname+'/docs/index.html'));
