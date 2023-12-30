@@ -12,7 +12,7 @@ var server=require("http").Server(app);
 server.listen(process.env.PORT || 3000);
 
 app.get("/",function(req,res){
-  res.sendFile(path.join(__dirname+'/docs/index.html'));
+  res.sendFile(path.join(__dirname+'https://hanh211.github.io/ha23/docs/index.html'));
 });
 
 app.get("/ap",(req,res)=>{
